@@ -4,6 +4,13 @@ Snake-Game
 Snake Game written in pygame(Python)
 
 Requirements:
-pygame module
+ -pygame module
+ 
+ 
+You can install it using pip:
+  sudo pip install pygame
 
+
+Launching the game:
+  python snake.py
 
