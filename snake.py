@@ -150,50 +150,50 @@ class Game:
 				if self.level == 1:
 					self.image = self.d+"lemon.png"
 					self.wow = (200, 180, 250)
-					self.FPS  += 2	
+					self.FPS  += 1	
 				if self.level == 5:
 					self.image = self.d+"cake.png"
 					self.wow = (255, 180, 240)
-					self.FPS  += 2	
+					self.FPS  += 1	
 				
 				if self.level == 3:
 					self.image = self.d+"cheese.png"
 					self.wow = (160, 220, 100)
-					self.FPS  += 2	
+					self.FPS  += 1	
 				if self.level == 4:
 					self.image = self.d+"coffee.png"
 					self.wow = (200, 130, 80)
-					self.FPS  += 2		
+					self.FPS  += 1		
 				if self.level == 2:
 					self.image = self.d+"orange.png"
 					self.wow = (250, 180, 200)
-					self.FPS  += 2
+					self.FPS  += 1
 				elif self.level == 6:
 					self.image = self.d+"citrus.png"
 					self.wow = (200, 180, 250)
-					self.FPS  += 2
+					self.FPS  += 1
 					
 				elif self.level == 7:
 					self.image = self.d+"cherry.png"
 					self.wow = (240, 110, 180)
-					self.FPS  += 2
+					self.FPS  += 1
 				elif self.level == 8:
 					self.image = self.d+"banana.png"
 					self.wow = (240, 240, 150)
-					self.FPS  += 2
+					self.FPS  += 1
 
 				elif self.level ==9:
 					self.image = self.d+"leaf.png"
 					self.wow = (210, 255, 150)
-					self.FPS  += 2		
+					self.FPS  += 1	
 				elif self.level == 10:
 					self.image = self.d+"melon.png"
 					self.wow = (210, 255, 255)
-					self.FPS  += 2
+					self.FPS  += 1
 				elif self.level == 11:
 					self.image = self.d+"choco.png"
 					self.wow = (170, 130, 80)
-					self.FPS  += 2										
+					self.FPS  += 1										
 								
 
 			else:
