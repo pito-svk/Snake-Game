@@ -27,10 +27,9 @@ class Game:
 		self.y = 5#50 # y position
 		self.w = 12# width
 		self.h = 12 # height
-		#self.speed = 80
+
 		self.head = 0 #syntactic sugar
-		#self.number = 0
-		#self.time = 0 # makes time loop
+
 		self.FPS = 12
 		self.coords =  [{'x':self.x, "y":self.y},
 		{'x':self.x+1, "y":self.y},
@@ -51,7 +50,9 @@ class Game:
 		self.yf = 12 # food width
 		self.random = choice(self.makecoords())
 		self.makefood = pygame.Surface((self.xf,self.yf))
+
 		assert self.xf == self.w and self.yf == self.h
+
 	def intro(self):
 		BOARD = pygame.display.set_mode((self.xb,self.yb))
 		WHITE = (255, 255, 255)
@@ -76,6 +77,8 @@ class Game:
 	def startgame(self):
 		self.intro()
 		self.run()	
+
+
 	def run(self):
 		pygame.init()
 		font = pygame.font.SysFont('Comic Sans MS',40)
@@ -117,19 +120,18 @@ class Game:
 				food = pygame.draw.ellipse(self.BOARD, self.red, (self.random[0],self.random[1],self.w,self.w))
 
 			for event in pygame.event.get():
-				#print event
 				if event.type == QUIT:
 					pygame.quit()
 					sys.exit()	
 
 				if event.type == KEYDOWN:
-					if event.key == K_RIGHT and movement != "left": #and self.x < 0:
+					if event.key == K_RIGHT and movement != "left":
 						movement = 'right'
-					elif event.key == K_LEFT and movement != "right":# and self.x > 40:
+					elif event.key == K_LEFT and movement != "right":
 						movement = 'left'
-					elif event.key == K_DOWN and movement != "up":# and self.y < self.yb-self.h:
+					elif event.key == K_DOWN and movement != "up":
 						movement = 'down'
-					elif event.key == K_UP and movement != "down":# and self.y > 0:
+					elif event.key == K_UP and movement != "down":
 						movement = 'up'
 			if SNAKE[HEAD]['x'] == -1 or SNAKE[HEAD]['x'] == 50 or SNAKE[HEAD]['y'] == -1 or SNAKE[HEAD]['y'] == 40:
 				return
@@ -138,10 +140,6 @@ class Game:
 				return
 				
 
-
-
-		
-			#self.time = 0
 			if SNAKE[HEAD]['x']*self.w == self.random[0] and SNAKE[HEAD]['y']*self.w == self.random[1]:
 				self.eatfoodreset()	
 				if self.score == self.level +2:
@@ -151,20 +149,20 @@ class Game:
 					self.image = self.d+"lemon.png"
 					self.wow = (200, 180, 250)
 					self.FPS  += 2	
-				if self.level == 5:
+				if self.level == 2:
 					self.image = self.d+"cake.png"
 					self.wow = (255, 180, 240)
 					self.FPS  += 2	
 				
-				if self.level == 3:
+				if self.level == 5:
 					self.image = self.d+"cheese.png"
 					self.wow = (160, 220, 100)
 					self.FPS  += 2	
-				if self.level == 4:
+				if self.level == 3:
 					self.image = self.d+"coffee.png"
 					self.wow = (200, 130, 80)
 					self.FPS  += 2		
-				if self.level == 2:
+				if self.level == 4:
 					self.image = self.d+"orange.png"
 					self.wow = (250, 180, 200)
 					self.FPS  += 2
@@ -231,7 +229,6 @@ class Game:
 			for y in range(0,self.yb,self.h):
 				coords.append((x,y))	
 		return coords
-		#TODO: urobit remove coords kde je had level presnicka a created 
 	
 	def eatfoodreset(self):
 		self.random = choice(self.makecoords())
@@ -240,7 +237,4 @@ class Game:
 		self.score += 1
 		
 
-
-
-			
 Game().startgame()
