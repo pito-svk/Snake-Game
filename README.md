@@ -13,4 +13,6 @@ You can install it using pip:
 
 Launching the game:
   python snake.py
+  
+![alt tag](http://s7.postimg.org/tj4uddurf/snakeimg.jpg)
 
