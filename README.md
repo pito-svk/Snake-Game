@@ -14,7 +14,7 @@ You can install it using pip:
 
 
 ```
-  sudo pip install pygame
+  pip install pygame
 ```  
 
 
